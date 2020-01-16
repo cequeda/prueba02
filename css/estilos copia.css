@@ -1,0 +1,375 @@
+
+/*------------------------------------------------------------*/
+/*-------------------------fuentes-----------------------------------*/
+@font-face {
+    font-family: 'fuente1';
+    src: url(../fonts/Cinzel-Bold.ttf) format('truetype');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'fuente2';
+    src: url(../fonts/Cinzel-Black.ttf) format('truetype');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'fuente3';
+    src: url(../fonts/Cinzel-Regular.ttf) format('truetype');
+    font-weight: 100;
+}
+/*------------------------------------------------------------*/
+/*-------------------------cuerpo-----------------------------------*/*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background-color: rgb(224, 215, 215);
+    color: black;
+    font-family: 'Maven Pro', sans-serif;
+    
+}
+#contenedor{
+    width: 90%;
+    height: 100vh;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: white;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+}
+/*------------------------------------------------------------*/
+/*-------------------------header-----------------------------------*/
+.header{
+    height: auto;
+    background: rgb(66, 64, 64);
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2;
+}
+.logo {
+    width: 100%;
+    height: auto;
+    background-image: url(../img/dragon2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    grid-column:1;
+    grid-row: 2;
+}
+.titulo {
+    grid-column:2;
+    grid-row: 2;
+    font-family: fuente2;
+}
+
+.credenciales {
+    grid-column:3;
+    grid-row: 2; 
+}
+.credenciales ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 0.7em;
+}
+.credenciales li {
+    text-align: center;
+    flex-grow: 1;
+    margin: auto;
+}
+.credenciales button {
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+}
+.credenciales button:hover {
+    color: #1883ba;
+    background-color: #ffffff;
+}
+
+/*------------------------------------------------------------*/
+/*-------------------------main-----------------------------------*/
+#main1 {
+    background: white;
+    color: rgb(66, 64, 64);
+    grid-column-start: 1;
+    grid-column-end: 3; 
+    font-family: fuente1;
+}
+.parte1{
+    width: 100%;
+    height: 350px;
+    background-image: url(../img/fondo.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.parte2 {
+    width: 100%;
+    margin: 20px 0px 20px 0px;
+}
+.parte2 li {
+    margin-left: 2%;
+    list-style: none;
+    margin: 20px 0px 20px 2%;
+}
+.parte2 i{
+    color: aquamarine;
+}
+.parte3 {
+    width: 80%;
+    margin: 40px 0px 0px 5%;
+    animation: mover 2s ease-in-out infinite alternate;
+}
+@keyframes mover {
+    0% {left: 30px;}
+    40% {left: 10px;}
+    60% {left: 0px;}
+    80% {right: 20px;}
+    100% {right: 10px;}
+}
+/*------------------------------------------------------------*/
+/*-------------------------main2 formulario-----------------------------------*/
+#main2 {
+    background: white;
+    color: rgb(66, 64, 64);
+    grid-column-start: 3;
+    grid-column-end: 4; 
+    
+}
+.anuncio {
+    width: 80%;
+    height: auto;
+    margin: 40px auto 0px auto;
+    color: black;
+    
+}
+.anuncio p {
+    padding: 10px;
+    
+}
+.anuncio a{
+    font-size:1.4em;
+    text-decoration:none;
+    transition: all 0.5s;
+    
+  }
+.anuncio p:nth-child(1) a{
+    color: #1883ba;
+    font-family: fuente3;
+    animation: neon1 0.5s ease-in-out infinite alternate;
+  }
+@keyframes neon1 {
+    0% {
+        text-shadow: 0 0 10px #fff,
+                   0 0 20px  #fff,
+                   0 0 30px  #fff,
+                   0 0 40px  #228DFF;
+      }
+      100% {
+        text-shadow: 0 0 5px #fff,
+                   0 0 10px #fff,
+                   0 0 15px #fff,
+                   0 0 20px #228DFF;
+      }
+  }
+.formulario{
+    width: 80%;
+    margin: 0px auto 0px auto;
+    font-size: 0.8em;
+}
+form {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius:1em;
+}
+form div + div {
+    margin-top: 2em;
+}
+.este {
+    margin-top: 20px;
+}
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: left;
+    padding: 1%;
+}
+input[type=text]{
+    height: 30px;
+}
+button[type=submit] {
+    font-size: 2em;
+    margin: 30px 0px 20px 30%;
+    border: indigo 1px dashed;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+}
+.formulario button:hover {
+    color: #1883ba;
+    background-color: #ffffff;
+}
+
+.Gif {
+    width: 80%;
+    height: 180px;
+    background-image: url(../img/volando.gif);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*------------------------------------------------------------*/
+/*-------------------------footer-----------------------------------*/
+#footer {
+    background: rgb(66, 64, 64);
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 4; 
+    
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2;
+}
+#footer p {
+    margin-top: 5%;
+    width: 100%;
+    text-align: center;
+}
+.p3 {
+    width: 100%;
+    height: 100px;
+    float: right;
+    grid-column:3;
+}
+.p3 .icom{
+    position: relative;
+    top: 20px;
+    display: inline-table;
+    width: auto;
+    height: 50px;
+    text-align: center;
+}
+.p3 .icom:hover{
+    width: 120px;
+    transform: scale(2);
+    
+}
+#pimg1 i{
+    font-size: 30px;
+}
+#pimg2 i{
+    font-size: 30px;
+}
+#pimg3 i{
+    font-size: 30px;
+}
+#pimg4 i{
+    font-size: 30px;
+}
+/*------------------------------------------------------------*/
+/*-------------------------reglas-----------------------------------*/
+@media (max-width: 375px){
+
+    #contenedor{
+        
+        grid-gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, auto);
+    }
+/*------------------------------------------------------------*/
+/*-------------------------header-----------------------------------*/
+.header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2;
+}
+.logo {
+    grid-column:1;
+    grid-row: 1;
+}
+.titulo {
+    text-align: center;
+    grid-column:1/4;
+    font-size: 1em;
+}
+.credenciales {
+    grid-column:2/4;
+    grid-row: 1; 
+}
+.credenciales ul{
+    font-size: 0.5em;
+}
+.credenciales button {
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 100;
+    font-size: 10px;
+}
+
+/*------------------------------------------------------------*/
+/*-------------------------main-----------------------------------*/
+#main1 {
+    grid-column-end: 4; 
+}
+.parte1{
+    width: 100%;
+    height: 250px;
+    
+}
+.parte3 {
+    width: 90%;
+}
+
+/*------------------------------------------------------------*/
+/*-------------------------main2 formulario-----------------------------------*/
+#main2 {
+    grid-column-start: 1;
+    grid-column-end: 4; 
+    
+}
+input[type=text]{
+    height: 30px;
+    background: whitesmoke;
+}
+/*------------------------------------------------------------*/
+/*-------------------------footer-----------------------------------*/
+#footer p {
+    font-size: 0.5em;
+}
+#pimg1 i{
+    font-size: 20px;
+}
+#pimg2 i{
+    font-size: 20px;
+}
+#pimg3 i{
+    font-size: 20px;
+}
+#pimg4 i{
+    font-size: 20px;
+}
+}
